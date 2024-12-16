@@ -4,107 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prasad Nitin Deshpande - Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            background: #f4f4f9;
+            color: #333;
         }
         header {
-            background: #0078d7;
+            background-color: #0078d7;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1rem;
             text-align: center;
         }
-        main {
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #f4f4f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #0078d7;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        section {
-            margin-bottom: 2rem;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 0.5rem 0;
+        section h2 {
+            border-bottom: 2px solid #0078d7;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         footer {
             text-align: center;
             padding: 1rem;
-            background: #333;
+            background: #0078d7;
             color: white;
+            margin-top: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Prasad Nitin Deshpande</h1>
-        <p>Dallas, TX | <a href="mailto:pdprasaddeshpande@gmail.com">pdprasaddeshpande@gmail.com</a> | <a href="https://www.linkedin.com/in/prasadeshpande/" target="_blank">LinkedIn</a></p>
     </header>
-    <main>
-        <section>
-            <h2>Summary</h2>
-            <p>Cloud Engineer professional with 4 years of work experience. Core competencies include Linux Administration, Orchestration tools, Automation (IaC), and Project Management.</p>
-        </section>
-        <section>
-            <h2>Skills & Certifications</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Cloud Engineer professional with 4 years of work experience specializing in Linux Administration, Orchestration tools, Automation (IaC), and Project Management.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card">
             <ul>
                 <li><strong>Networking:</strong> VPC, Firewall, Cloud Load Balancing, Cloud CDN, Cloud DNS</li>
-                <li><strong>Management Tools:</strong> Jira, Confluence, Excel, Microsoft 365, SharePoint</li>
-                <li><strong>Databases:</strong> MySQL, RDS, DynamoDB, Google Big Query, Hadoop, Apache Spark</li>
                 <li><strong>Cloud Technologies:</strong> AWS, Azure, GCP, Kubernetes, Terraform</li>
+                <li><strong>Databases:</strong> MySQL, RDS, DynamoDB, Google Big Query</li>
                 <li><strong>Certifications:</strong> AWS Solutions Architect, Azure Fundamentals, Kubernetes Engineer</li>
             </ul>
-        </section>
-        <section>
-            <h2>Work Experience</h2>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="card">
             <h3>Cloud Engineer Intern | Tenet Employment Inc | Dallas, TX</h3>
             <ul>
                 <li>Containerized Python scripts with Docker, reducing cloud costs by 5%.</li>
                 <li>Automated infrastructure with Airflow DAGs, improving workflow efficiency by 30%.</li>
             </ul>
+        </div>
+        <div class="card">
             <h3>Cloud Support Engineer | Digitalocean | Bangalore, India</h3>
             <ul>
                 <li>Optimized AWS provisioning, reducing expenses by 50%.</li>
                 <li>Implemented Jenkins pipelines for rapid deployments, reducing downtime by 95%.</li>
             </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
+        </div>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card">
             <h3>University of Texas at Dallas</h3>
             <p>Master of Information Technology and Management (2023-2025), GPA: 3.96</p>
+        </div>
+        <div class="card">
             <h3>Dr. Babasaheb Ambedkar Marathwada University</h3>
             <p>Bachelor of Engineering in Computer Science (2014-2018), GPA: 3.50</p>
-        </section>
-        <section>
-            <h2>Leadership</h2>
-            <h3>Vice President | UTD AWS Club</h3>
-            <ul>
-                <li>Mentored 20+ students on AWS certification paths.</li>
-                <li>Boosted hackathon attendance by 25% through outreach and partnerships.</li>
-            </ul>
-        </section>
-    </main>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:pdprasaddeshpande@gmail.com">pdprasaddeshpande@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/prasadeshpande/" target="_blank">linkedin.com/in/prasadeshpande</a></p>
+    </section>
     <footer>
-        <p>&copy; 2024 Prasad Nitin Deshpande</p>
+        <p>&copy; 2024 Prasad Nitin Deshpande. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
-
